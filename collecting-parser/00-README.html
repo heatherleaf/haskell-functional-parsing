@@ -1,0 +1,52 @@
+
+<h1><a href="..">The Functional Parsing Library</a></h1>
+
+<h2>The Grammar Collecting Parser (ch. 8)</h2>
+
+To use the grammar collecting parser described in this chapter,
+you first need the following files:
+<ul>
+  <li><strong><code><a href="../OrdSet.hs">OrdSet.hs</a></code></strong>
+      &nbsp;
+      (from the parent directory)
+  <li><strong><code><a href="../OrdMap.hs">OrdMap.hs</a></code></strong>
+      &nbsp;
+      (from the parent directory)
+  <li><strong><code><a href="../parsers/Parser.hs">Parser.hs</a></code></strong>
+      &nbsp;
+      (from the <strong><code>parsers</code></strong> directory)
+  <li><strong><code><a href="../algorithms/Grammar.hs">Grammar.hs</a></code></strong>
+      &nbsp;
+      (from the <strong><code>algorithms</code></strong> directory)
+  <li><strong><code><a href="Ref.hs">Ref.hs</a></code></strong>
+</ul>
+Then you choose which variant of the collecting parser
+you want to use:
+<ol style="list-style-type: lower-roman">
+  <li><strong><code><a href="CollectingParserOriginal.hs">CollectingParserOriginal.hs</a></code></strong>
+      &nbsp;
+      (the code from section 8.2;
+      only works with chart parsing)
+      <p>
+  <li><strong><code><a href="CollectingParserOptimized.hs">CollectingParserOptimized.hs</a></code></strong>
+      &nbsp;
+      (optimized version for efficiency and generality;
+      works with chart parsing and LR parsing)
+      <p>
+  <li><strong><code><a href="CollectingParserToChart.hs">CollectingParserToChart.hs</a></code></strong>
+      &nbsp;
+      (uses the parsing algorithms that parses to a chart of passive edges;
+      works with chart parsing, LR parsing and CYK parsing)
+</ol>
+Finally you need an implementation of a parsing algorithm,
+from the <strong><code><a href="../algorithms/">algorithms</a></code></strong>&nbsp; directory.
+
+<p>
+Observe that since the <code>Ref</code> module uses functions from the
+<code>IOExts</code> module, you have to include the <em>lang</em>
+package when compiling with GHC.
+I.e. you need to add the argument <code>-package lang</code>
+to the GHC compiler.
+
+
+

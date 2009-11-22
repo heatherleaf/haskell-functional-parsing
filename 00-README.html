@@ -1,0 +1,58 @@
+
+<h1>The Functional Parsing Library</h1>
+
+<p>
+In this library I, Peter Ljunglöf, have collected Haskell files for the
+parsers and parsing algorithms described in my Licenciate Thesis.
+Observe that you will need the following extensions of Haskell 98:
+<ul>
+  <li>Multi-parameter type classes with functional dependencies
+  <li>Existential quantification in data types
+</ul>
+The files here are tested in both Hugs and GHC (with the appropriate
+flags for turning on Haskell extensions).
+</p>
+
+<p>
+Any questions or comments on the code or the thesis are of course
+much appreciated.
+</p>
+
+<h3><a href="parsers/">Combinator Parsers</a>&nbsp; (ch. 3 and 4)</h3>
+
+<p>
+The parsers described in these chapters can be found
+in the <strong><code>parsers</code></strong> directory.
+Apart from the files in that directory you will need the
+<strong><code>OrdMap</code></strong> module from this directory.
+</p>
+
+<h3><a href="algorithms/">Parsing Algorithms</a>&nbsp; (ch. 5, 6 and 7)</h3>
+
+<p>
+The parsers described in these chapters can be found in the
+<strong><code>algorithms</code></strong> directory.
+Apart from the files in that directory you will need the
+<strong><code>OrdSet</code></strong> and
+<strong><code>OrdMap</code></strong> modules from this directory.
+</p>
+
+<h3><a href="collecting-parser/">The Grammar Collecting Parser</a>&nbsp; (ch. 8)</h3>
+
+<p>
+The grammar collecting parser makes use of files from
+various places, apart from the module of your choice
+from the <strong><code>collecting-parser</code></strong> directory.
+First you need the
+<strong><code>OrdSet</code></strong> and
+<strong><code>OrdMap</code></strong> modules from this directory;
+second you need the
+<strong><code>Parser</code></strong> module from
+the <strong><code>parsers</code></strong> directory;
+and third you need the appropriate modules from the
+<strong><code>algorithms</code></strong> directory,
+to be able to run the chosen parsing algorithm.
+</p>
+
+
+

@@ -1,0 +1,75 @@
+
+<h1><a href="..">The Functional Parsing Library</a></h1>
+
+<h2>Parsers (ch. 3 and 4)</h2>
+
+To use a parser described in these chapters, you first of all need the
+following files:
+<ul>
+  <li><strong><code><a href="../OrdMap.hs">OrdMap.hs</a></code></strong>
+      &nbsp;
+      (from the parent directory)
+  <li><strong><code><a href="Parser.hs">Parser.hs</a></code></strong>
+</ul>
+Then you can create the following parsers by adding the given files:
+<ul>
+  <li><em>Standard s</em><br>
+      (the standard parser, sec. 3.2):
+      <strong><code><a href="Standard.hs">Standard.hs</a></code></strong>
+  <li><em>ContTrans (Standard s)</em><br>
+      (the standard continuation parser, sec. 3.3.2):
+      <strong><code><a href="Standard.hs">Standard.hs</a>,
+      <a href="ContTrans.hs">ContTrans.hs</a></code></strong>
+  <li><em>ContTrans (StandardEndo s)</em><br>
+      (the endomorphism continuation parser, sec. 3.3.4):
+      <strong><code><a href="StandardEndo.hs">StandardEndo.hs</a>,
+      <a href="ContTrans.hs">ContTrans.hs</a></code></strong>
+  <li><em>StackTrans (Standard s)</em><br>
+      (the standard stack continuation parser, sec. 3.4.1):
+      <strong><code><a href="Standard.hs">Standard.hs</a>,
+      <a href="StackTrans.hs">StackTrans.hs</a></code></strong>
+  <lI><em>StackTrans (StandardEndo s)</em><br>
+      (the endomorphism stack continuation parser, sec. 3.4.1):
+      <strong><code><a href="StandardEndo.hs">StandardEndo.hs</a>,
+      <a href="StackTrans.hs">StackTrans.hs</a></code></strong>
+  <li><em>Stream s</em><br>
+      (the stream processor parser, sec. 3.5.2):
+      <strong><code><a href="Stream.hs">Stream.hs</a></code></strong>
+  <li><em>ContTrans (Stream s)</em><br>
+      (the stream continuation parser, sec. 3.5.3):
+      <strong><code><a href="Stream.hs">Stream.hs</a>,
+      <a href="ContTrans.hs">ContTrans.hs</a></code></strong>
+  <li><em>StackTrans (Stream s)</em><br>
+      (the stream stack continuation parser, sec. 3.5.4):
+      <strong><code><a href="Stream.hs">Stream.hs</a>,
+      <a href="StackTrans.hs">StackTrans.hs</a></code></strong>
+  <li><em>Trie s</em><br>
+      (the trie parser, sec. 4.2.1):
+      <strong><code><a href="Trie.hs">Trie.hs</a></code></strong>
+  <li><em>AmbTrie s</em><br>
+      (the ambiguous trie parser, sec. 4.2.2):
+      <strong><code><a href="AmbTrie.hs">AmbTrie.hs</a></code></strong>
+  <li><em>ExTrie s</em><br>
+      (the extended trie parser, sec. 4.3.3):
+      <strong><code><a href="ExTrie.hs">ExTrie.hs</a></code></strong>
+  <li><em>AmbExTrie s</em><br>
+      (the ambiguous extended trie parser, sec. 4.3.4):
+      <strong><code><a href="AmbExTrie.hs">AmbExTrie.hs</a></code></strong>
+  <li><em>PairTrie (Standard s),
+      PairTrie (ContTrans (Standard s)),
+      PairTrie (ContTrans (StandardEndo s)),
+      PairTrie (StackTrans (Standard s)),
+      PairTrie (StackTrans (StandardEndo s))</em><br>
+      (the paired trie parser, sec. 4.4):
+      <strong><code><a href="PairTrie.hs">PairTrie.hs</a></code></strong>, together with a subset of
+      (<strong><code><a href="Standard.hs">Standard.hs</a>,
+      <a href="StandardEndo.hs">StandardEndo.hs</a>,
+      <a href="ContTrans.hs">ContTrans.hs</a>,
+      <a href="StackTrans.hs">StackTrans.hs</a></code></strong>)
+</ul>
+The file <strong><code><a href="ExampleParsers.hs">ExampleParsers.hs</a></code></strong>
+exports all the parsers given above
+as one module.
+
+
+

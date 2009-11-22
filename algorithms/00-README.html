@@ -1,0 +1,91 @@
+
+<h1><a href="..">The Functional Parsing Library</a></h1>
+
+
+<h2>Parsing Algorithms (ch. 5, 6 and 7)</h2>
+
+To use a parsing algorithm described in these chapters, you first of all need the
+following files:
+<ul>
+  <li><strong><code><a href="../OrdSet.hs">OrdSet.hs</a></code></strong>
+      &nbsp;
+      (from the parent directory)
+  <li><strong><code><a href="../OrdMap.hs">OrdMap.hs</a></code></strong>
+      &nbsp;
+      (from the parent directory)
+  <li><strong><code><a href="Grammar.hs">Grammar.hs</a></code></strong>
+</ul>
+The modules that are called
+<strong><code>...ToChart.hs</code></strong>&nbsp;
+also make use of the
+<strong><code><a href="FinalChart.hs">FinalChart.hs</a></code></strong>
+module.
+
+<h3>Chart parsing (ch. 5)</h3>
+
+There are three different implementations of chart parsing:
+<ol style="list-style-type: lower-roman">
+  <li><strong><code><a href="ChartParserOriginal.hs">ChartParserOriginal.hs</a></code></strong>
+      &nbsp;
+      (the unoptimized code in sections 5.3-5.5)
+      <p>
+  <li><strong><code><a href="ChartParserOptimized.hs">ChartParserOptimized.hs</a></code></strong>
+      &nbsp;
+      (with the optimizations suggested in section 5.6)
+      <p>
+  <li><strong><code><a href="ChartParserToChart.hs">ChartParserToChart.hs</a></code></strong>
+      &nbsp;
+      (returning a chart of passive edges;
+      optimized code)
+</ol>
+
+<h3>Generalized LR parsing (ch. 6)</h3>
+
+To use the different LR implementations, you first need the following
+three modules:
+<ul>
+  <li><strong><code><a href="LRTableOriginal.hs">LRTableOriginal.hs</a></code></strong>
+  <li><strong><code><a href="LRTableOptimized.hs">LRTableOptimized.hs</a></code></strong>
+  <li><strong><code><a href="LRAugment.hs">LRAugment.hs</a></code></strong>
+</ul>
+Then you can choose any of four different implementations:
+<ol style="list-style-type: lower-roman">
+  <li><strong><code><a href="LRParserDF.hs">LRParserDF.hs</a></code></strong>
+      &nbsp;
+      (depth-first parsing from sections 6.2.2 and 6.3.2)
+      <p>
+  <li><strong><code><a href="LRParserBF.hs">LRParserBF.hs</a></code></strong>
+      &nbsp;
+      (breadth-first parsing from sections 6.2.3 and 6.3.2)
+      <p>
+  <li><strong><code><a href="LRParserT.hs">LRParserT.hs</a></code></strong>
+      &nbsp;
+      (approximative Tomita parsing from sections 6.2.4-5 and 6.3.3-4)
+      <p>
+  <li><strong><code><a href="LRParserToChart.hs">LRParserToChart.hs</a></code></strong>
+      &nbsp;
+      (approximative Tomita parsing to a chart of passive edges)
+</ol>
+
+<h3>CYK parsing (ch. 7)</h3>
+
+There are three different implementations of CYK parsing:
+<ol style="list-style-type: lower-roman">
+  <li><strong><code><a href="CYKParserOriginal.hs">CYKParserOriginal.hs</a></code></strong>
+      &nbsp;
+      (the unoptimized code in section 7.3)
+      <p>
+  <li><strong><code><a href="CYKParserOptimized.hs">CYKParserOptimized.hs</a></code></strong>
+      &nbsp;
+      (with optimized lookup of grammar productions)
+      <p>
+  <li><strong><code><a href="CYKParserUnitToChart.hs">CYKParserUnitToChart.hs</a></code></strong>
+      &nbsp;
+      (returning a chart of passive edges;
+      optimized code;
+      also handles unit productions)
+</ol>
+
+
+
+
